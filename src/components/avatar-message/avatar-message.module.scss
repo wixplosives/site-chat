@@ -1,2 +1,16 @@
 .root {
 }
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.chat-message {
+  width: 100%;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #ededed;
+  border-radius: 8px;
+}
