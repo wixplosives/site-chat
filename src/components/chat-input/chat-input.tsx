@@ -12,7 +12,7 @@ export interface ChatInputProps {
 export const ChatInput = ({ className }: ChatInputProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <input className={styles.input} />
+            <input placeholder="dfdfdfdf" className={styles.input} />
         </div>
     );
 };
