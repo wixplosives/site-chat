@@ -11,8 +11,8 @@ export default createBoard({
                     text: 'hello user',
                 },
                 {
-                    kind: 'avatar-message',
-                    text: 'some text',
+                    kind: 'user-message',
+                    text: 'some tennbmnbxt \u2764',
                 },
             ]}
         />
