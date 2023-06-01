@@ -6,7 +6,7 @@ export default createBoard({
     name: 'ChatInput',
     Board: () => <ChatInput />,
     environmentProps: {
-        canvasWidth: 146,
+        canvasWidth: 236,
         canvasHeight: 46,
     },
 });

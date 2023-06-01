@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from './chat.module.scss';
 import { ChatMessage, MessageView } from '../types';
+import { ChatInput } from '../chat-input/chat-input';
 
 export interface ChatProps {
     className?: string;
@@ -15,16 +16,16 @@ export interface ChatProps {
 export const Chat = ({ className, views, messages }: ChatProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-           {messages.map((msg, idx)=>{
+            {messages.map((msg, idx) => {
                 const View = views[msg.kind]?.Comp || DefaultMessage.Comp;
-            return <View key={idx} message={msg} />
-           })}
+                return <View key={idx} message={msg} />;
+            })}
+            <ChatInput />
         </div>
     );
 };
 
-
 export const DefaultMessage: MessageView<ChatMessage> = {
-    Comp:
-    ({message})=><div>view not found for message of kind {message.kind}</div>,
-    kind: 'default'}
+    Comp: ({ message }) => <div>view not found for message of kind {message.kind}</div>,
+    kind: 'default',
+};

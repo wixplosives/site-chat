@@ -8,6 +8,6 @@ import {UserMessageView} from '../user-message/user-message'
 export const WrappedChat = ({messages}: {messages:Array<AvatarMessage>})=>{
     return <Chat messages={messages} views={{
         [AvatarMessageView.kind]: AvatarMessageView,
-        [UserMessageView.kind]: UserMessageView,
+        [UserMessageView.kind]: UserMessageView
     }}/>
 }
