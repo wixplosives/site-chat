@@ -22,7 +22,7 @@ export const AvatarMessageComp = ({ className, message }: AvatarMessageProps) =>
                 UserMessage_module['margin-bottom']
             )}
         >
-            <Avatar />
+            <Avatar src="https://static.wixstatic.com/media/ee0e97_3371e9dac6ca4fae8bee535d3cd49ebe~mv2.png/v1/fill/w_848,h_1200,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/ee0e97_3371e9dac6ca4fae8bee535d3cd49ebe~mv2.png" />
             <div className={styles['chat-message']}>{message.text}</div>
         </div>
     );

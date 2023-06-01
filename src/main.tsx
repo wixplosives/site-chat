@@ -31,4 +31,4 @@ export default class Chat extends HTMLElement {
     }
 }
 
-window.customElements.define('site-chat', Chat);
+customElements.define('site-chat', Chat);

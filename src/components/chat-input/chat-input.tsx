@@ -4,9 +4,9 @@ import { ChatIcons } from '../chat-icons/chat-icons';
 
 export interface ChatInputProps {
     className?: string;
-    sendText: () => void;
-    text: string;
-    onTextChange: (text: string) => void;
+    sendText?: () => void;
+    text?: string;
+    onTextChange?: (text: string) => void;
 }
 
 /**
@@ -21,7 +21,7 @@ export const ChatInput = ({ className, sendText, onTextChange, text }: ChatInput
                     placeholder="Send me a massage"
                     className={styles.input}
                     value={text}
-                    onChange={(ev) => onTextChange(ev.target.value)}
+                    onChange={(ev) => onTextChange?.(ev.target.value)}
                     onSubmit={sendText}
                 />
             </div>

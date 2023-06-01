@@ -13,10 +13,10 @@ export interface ChatIconsProps {
  */
 export const ChatIcons = ({ className, onClick }: ChatIconsProps) => {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={classNames(styles.root, className)} onClick={onClick}>
             <div></div>
             <img
-                onClick={onClick}
+                
                 src="   https://cdn-icons-png.flaticon.com/512/786/786205.png "
                 className={styles.AddImage}
             />
