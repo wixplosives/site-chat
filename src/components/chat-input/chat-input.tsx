@@ -15,10 +15,7 @@ export const ChatInput = ({ className }: ChatInputProps) => {
         <div className={classNames(styles.root, className)}>
             <div className={styles.DivInput}>
                 <input placeholder="Send me a massage" className={styles.input} />
-                <img
-                    src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
-                    className={styles.share}
-                />
+                
             </div>
             <ChatIcons />
         </div>
