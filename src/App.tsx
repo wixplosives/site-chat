@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import { ReactComponent as ReactLogo } from './assets/react.svg';
 import { ReactComponent as ViteLogo } from './assets/vite.svg';
