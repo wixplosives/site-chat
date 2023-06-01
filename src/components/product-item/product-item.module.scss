@@ -1,0 +1,35 @@
+.root {
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  width: 100%;
+  gap: 0px;
+  background-color: #fff;
+  box-shadow: 1.41px 1.41px 15px rgba(12, 12, 12, 0.3);
+  border-radius: 8px;
+}
+.price {
+  margin-top: 0px;
+}
+.details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.productname {
+  font-size: 20px;
+  font-weight: 600;
+}
+.button {
+  margin-top: 4px;
+  background-color: #e43a79;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.productimage {
+  width: 100%;
+}
