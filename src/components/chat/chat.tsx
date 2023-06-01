@@ -7,13 +7,14 @@ export interface ChatProps {
     messages: ChatMessage[];
     views: Record<string, MessageView<any>>;
     onUserMessage?: (text: string) => void;
+    status: 'idle' | 'loading';
 }
 
 /**
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
-export const Chat = ({ className, views, messages, onUserMessage }: ChatProps) => {
+export const Chat = ({ className, views, messages, onUserMessage, status }: ChatProps) => {
     const [text, setText] = useState('');
     return (
         <div className={classNames(styles.root, className)}>
@@ -24,8 +25,12 @@ export const Chat = ({ className, views, messages, onUserMessage }: ChatProps) =
             <div>
                 <textarea value={text} onChange={(ev) => setText(ev.target.value)}></textarea>
                 <button
+                    disabled={status === 'loading'}
                     onClick={() => {
-                        onUserMessage?.(text)
+                        if (status !== 'idle') {
+                            return;
+                        }
+                        onUserMessage?.(text);
                         setText('');
                     }}
                 >
