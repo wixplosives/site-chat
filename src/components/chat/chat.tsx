@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import styles from './chat.module.scss';
 import { ChatMessage, MessageView } from '../types';
+import { ChatInput } from '../chat-input/chat-input';
+
 import { useState } from 'react';
 export interface ChatProps {
     className?: string;
@@ -22,21 +24,17 @@ export const Chat = ({ className, views, messages, onUserMessage, status }: Chat
                 const View = views[msg.kind]?.Comp || DefaultMessage.Comp;
                 return <View key={idx} message={msg} />;
             })}
-            <div>
-                <textarea value={text} onChange={(ev) => setText(ev.target.value)}></textarea>
-                <button
-                    disabled={status === 'loading'}
-                    onClick={() => {
-                        if (status !== 'idle') {
-                            return;
-                        }
-                        onUserMessage?.(text);
-                        setText('');
-                    }}
-                >
-                    Button
-                </button>
-            </div>
+            <ChatInput
+                sendText={() => {
+                    if (status !== 'idle') {
+                        return;
+                    }
+                    onUserMessage?.(text);
+                    setText('');
+                }}
+                text={text}
+                onTextChange={setText}
+            />
         </div>
     );
 };
