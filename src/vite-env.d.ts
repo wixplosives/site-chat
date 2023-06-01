@@ -8,3 +8,8 @@ declare module '*.svg' {
     >;
     export default ReactComponent;
 }
+
+declare module 'react-shadow-dom-retarget-events' {
+    export const retargetEvents: (el: ShadowRoot) => void;
+    export default retargetEvents;
+}
