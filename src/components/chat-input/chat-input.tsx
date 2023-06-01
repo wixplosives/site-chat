@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './chat-input.module.scss';
+import { ChatIcons } from '../chat-icons/chat-icons';
 
 export interface ChatInputProps {
     className?: string;
@@ -12,7 +13,14 @@ export interface ChatInputProps {
 export const ChatInput = ({ className }: ChatInputProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <input placeholder="dfdfdfdf" className={styles.input} />
+            <div className={styles.DivInput}>
+                <input placeholder="Send me a massage" className={styles.input} />
+                <img
+                    src="https://wixplosives.github.io/codux-assets-storage/add-panel/image-placeholder.jpg"
+                    className={styles.share}
+                />
+            </div>
+            <ChatIcons />
         </div>
     );
 };

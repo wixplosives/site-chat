@@ -1,0 +1,23 @@
+.root {
+  padding: 4px 0px;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  color: FEE1FF;
+  background-color: #fee1ff;
+  border-bottom-right-radius: 4px;
+}
+.AddImage {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+.ChatIcon {
+  justify-content: space-between;
+  gap: 100px;
+}
+.AddLink {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
